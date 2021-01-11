@@ -1,6 +1,7 @@
 const {db,conn, spAsync}= require('../../db/index');
 let spGetArchivedNotes = `Call getAllArchivedNotes ()`;
 
+//get all archived notes
 const getAllArchivedNotes = (req,res)=>{
     
     spAsync(spGetArchivedNotes).then(result=>{

@@ -4,6 +4,7 @@ const getAllNotesController = require('../controllers/getAllNotes.controller');
 const addNoteController = require('../controllers/addNote.controller');
 const updateNoteController = require('../controllers/updateNote.controller');
 const deleteNoteController = require('../controllers/deleteNote.controller');
+const archieveNoteController = require('../controllers/archiveNote.controller');
 const unArchieveNoteController = require('../controllers/unArchiveNote.controller');
 const getAllArchievedNotesController = require('../controllers/getAllArchivedNotes.controller');
 const getAllUnArchievedNotesController = require('../controllers/getAllUnArchivedNotes.controller');

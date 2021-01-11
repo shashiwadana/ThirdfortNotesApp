@@ -1,6 +1,7 @@
 const {db,conn, spAsync}= require('../../db/index');
 let spGetAllNotes = `Call selectAllNotes ()`;
 
+//get all notes
 const getAllNotes = (req,res)=>{
     
     spAsync(spGetAllNotes).then(result=>{

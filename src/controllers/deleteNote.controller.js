@@ -2,6 +2,7 @@
 const {db,conn, spAsync}= require('../../db/index');
 let spDeleteNote = `Call deleteNote(?)`;
 
+//Delete a note by id
 const deleteNote = (req, res) => {
     let id = req.params.id;
        

@@ -1,6 +1,7 @@
 const {db,conn, spAsync}= require('../../db/index');
 let spArchiveNote = `Call archiveNote (?)`;
 
+//Archieve added note 
 const archiveNote = (req, res) => {
     let id = req.params.id;
     

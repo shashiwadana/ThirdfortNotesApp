@@ -1,6 +1,7 @@
 const {db,conn, spAsync}= require('../../db/index');
 let spUnArchiveNote = `Call unArchiveNote(?)`;
 
+// unb archive a note by id
 const unArchiveNote = (req, res) => {
     let id = req.params.id;
     

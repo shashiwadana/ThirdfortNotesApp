@@ -1,6 +1,7 @@
 const {db,conn, spAsync}= require('../../db/index');
 let spUpdateNote = `Call updateNote (?,?,?,?)`;
 
+//update a note by id 
 const updateNote = (req, res) => {
     let id = req.params.id;
     let title=req.body.title;

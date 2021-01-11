@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "49bbbc43-1eda-4d94-b0c7-2b553598a9a9",
+		"name": "ThirdFortDocumentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/addNote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "task 4",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "tsask 44",
+							"type": "text"
+						},
+						{
+							"key": "archive_status",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/addNote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"addNote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/getAllNotes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "task t5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "task t5 description",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "archive_status",
+							"value": "0",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/getAllNotes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getAllNotes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/deleteNote/33",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "task t5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "task t5 description",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "archive_status",
+							"value": "0",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/deleteNote/33",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"deleteNote",
+						"33"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/archiveNote/32",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "task t5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "task t5 description",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "archive_status",
+							"value": "0",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/archiveNote/32",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"archiveNote",
+						"32"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/getAllArchivedNotes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "task t5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "task t5 description",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "archive_status",
+							"value": "0",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/getAllArchivedNotes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getAllArchivedNotes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/getAllUnArchivedNotes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "task t5",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "task t5 description",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "archive_status",
+							"value": "0",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/getAllUnArchivedNotes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getAllUnArchivedNotes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,6 +1,7 @@
 const {db,conn, spAsync}= require('../../db/index');
 let spAddNote = `Call addNote (?,?,?)`;
 
+//Add a note to database
 const addNote = (req, res) => {
   
     let title=req.body.title;
