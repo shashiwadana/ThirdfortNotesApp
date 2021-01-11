@@ -1,0 +1,11 @@
+{
+  "name": "notes_app_backend",
+  "version": "1.0.0",
+  "description": " REST API backend application that can be used to manage personal notes in a multi-user environment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shashiwadana",
+  "license": "ISC"
+}
