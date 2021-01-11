@@ -17,4 +17,7 @@ router.put('/updateNote/:id',(req,res)=>{
 router.delete('/deleteNote/:id',(req,res)=>{
     deleteNoteController.deleteNote(req,res)
 })
+router.patch('/archiveNote/:id',(req,res)=>{
+    archieveNoteController.archiveNote(req,res)
+})
 module.exports=router;
