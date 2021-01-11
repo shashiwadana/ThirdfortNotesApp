@@ -17,6 +17,6 @@
 # Technologies and Reasons: 
 Developed using NodeJs and MySQL database.<br>
 Used stored procedures to write sql queries to avoid sql injections and for reusability.<br>
-To handle multiuser environment promised based approach was used.
+To handle multiuser environment, promise based approach was used.
 
 
