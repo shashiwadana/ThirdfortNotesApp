@@ -11,7 +11,7 @@
 
 
 # Api documentation:
-<br> Find inside ReadME folder in the repo: ***ReadME\notesAppDatabase.sql***
+<br> Find inside ReadME folder in the repo: ***ReadME\notes_app_db_schema.sql***
 
 
 # Technologies and Reasons: 
