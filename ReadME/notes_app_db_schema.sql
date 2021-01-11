@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 11, 2021 at 07:19 AM
+-- Generation Time: Jan 11, 2021 at 07:54 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -20,6 +20,46 @@ SET time_zone = "+00:00";
 --
 -- Database: `notes_app_db`
 --
+
+DELIMITER $$
+--
+-- Procedures
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `addNote` (IN `title` VARCHAR(255), IN `description` VARCHAR(255), IN `archive_status` INT)  BEGIN
+  INSERT INTO notes(title,description,archive_status) VALUES (title, description, archive_status);
+ END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `archiveNote` (IN `idIN` INT)  BEGIN
+  UPDATE notes SET archive_status=1 WHERE id=idIN;
+ END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `deleteNote` (IN `idIN` INT)  BEGIN
+  DELETE FROM notes WHERE id=idIN;
+ END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getAllArchivedNotes` ()  BEGIN
+  SELECT * from notes 
+  where archive_status=1 ;
+ END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getAllUnArchivedNotes` ()  BEGIN
+  SELECT * from notes 
+  where archive_status=0 ;
+ END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `selectAllNotes` ()  BEGIN
+  SELECT * from notes;
+ END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `unArchiveNote` (IN `idIN` INT)  BEGIN
+ UPDATE notes SET archive_status=0 WHERE id=idIN;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `updateNote` (IN `idIN` INT, IN `titleIN` VARCHAR(255), IN `descriptionIN` VARCHAR(255), IN `archive_statusIn` INT)  BEGIN
+  UPDATE notes SET title = titleIN, description = descriptionIN,archive_status=archive_statusIN  WHERE id=idIN;
+ END$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -45,7 +85,7 @@ INSERT INTO `notes` (`id`, `title`, `description`, `archive_status`) VALUES
 (29, 'task t1', 'task t1 description', 0),
 (30, 'task t2', 'task t2 description', 0),
 (31, 'task t3', 'task t3 description', 0),
-(32, 'task t4', 'task t4 description', 1);
+(32, 'task t6', 'task t6 description', 1);
 
 --
 -- Indexes for dumped tables
@@ -65,7 +105,7 @@ ALTER TABLE `notes`
 -- AUTO_INCREMENT for table `notes`
 --
 ALTER TABLE `notes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
