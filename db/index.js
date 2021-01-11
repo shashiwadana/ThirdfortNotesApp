@@ -13,7 +13,7 @@ const spAsync = async (spName,inputs=[])=>{
                 throw err;
             }
        
-               connection.query(spName,[],(err,result)=>{
+               connection.query(spName,[inputs[0],inputs[1],inputs[2],inputs[3]],(err,result)=>{
                 if(!err){
                     resolve(result)
                     reject('Connection Timed Out')
