@@ -11,7 +11,9 @@
 
 
 # Api documentation:
-<br> Find inside ReadME folder in the repo: ***ReadME\notes_app_db_schema.sql***
+<br> Find inside ReadME folder in the repo: ***ReadME\notes_app_db_schema.sql.txt*** 
+<br> 🛑 ****Database schema was added to the repo as a text file. When importing it change it to:****
+>notes_app_db_schema.sql
 
 
 # Technologies and Reasons: 
