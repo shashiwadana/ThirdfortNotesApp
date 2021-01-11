@@ -6,6 +6,7 @@ const updateNoteController = require('../controllers/updateNote.controller');
 const deleteNoteController = require('../controllers/deleteNote.controller');
 const unArchieveNoteController = require('../controllers/unArchiveNote.controller');
 const getAllArchievedNotesController = require('../controllers/getAllArchivedNotes.controller');
+const getAllUnArchievedNotesController = require('../controllers/getAllUnArchivedNotes.controller');
 
 router.get('/getAllNotes',(req,res)=>{
     getAllNotesController.getAllNotes(req,res)
@@ -27,5 +28,8 @@ router.patch('/unArchiveNote/:id',(req,res)=>{
 })
 router.get('/getAllArchivedNotes',(req,res)=>{
     getAllArchievedNotesController.getAllArchivedNotes(req,res)
+})
+router.get('/getAllUnArchivedNotes',(req,res)=>{
+    getAllUnArchievedNotesController.getAllUnArchivedNotes(req,res)
 })
 module.exports=router;
